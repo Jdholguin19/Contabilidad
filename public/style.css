@@ -1,0 +1,112 @@
+/* Sobrescribir colores de Bootstrap si es necesario */
+:root {
+    --bs-primary: #4a90e2; 
+    --bs-primary-rgb: 74, 144, 226;
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: #3a7bc8;
+    --bs-btn-hover-border-color: #3a7bc8;
+}
+
+
+/* Estilos generales */
+body {
+    background-color: #f4f7f6;
+}
+
+h2, h3 {
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.card-header h2 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+/* Colores para tipos de transacciones en la tabla */
+td.ingreso {
+    color: #198754; /* Verde de Bootstrap (success) */
+    font-weight: bold;
+}
+
+td.gasto {
+    color: #dc3545; /* Rojo de Bootstrap (danger) */
+    font-weight: bold;
+}
+
+td.inversion {
+    color: #0d6efd; /* Azul de Bootstrap (primary) */
+    font-weight: bold;
+}
+
+/* Botón de borrar */
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Estilos para las notificaciones */
+.notification {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: .25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.notification.low-balance {
+    color: #664d03;
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+}
+
+.notification.high-spending {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+}
+
+.close-btn {
+    border: none;
+    background: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: inherit;
+    padding-left: 1rem;
+}
+
+/* Estilos para saldos de cuenta */
+#balances-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.account-balance {
+    background-color: #e9ecef;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+/* Ajuste para los gráficos para que sean responsivos */
+#charts-container canvas {
+    max-width: 100%;
+    height: auto;
+}
+
